@@ -3,7 +3,14 @@ package org.opendevup.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Etudiant implements Serializable{
+	@Id
+	@GeneratedValue
 	private Long id;
 	private String nom;
 	private Date dateNaissance;
