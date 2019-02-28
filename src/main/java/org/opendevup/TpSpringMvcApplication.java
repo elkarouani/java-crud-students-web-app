@@ -25,7 +25,10 @@ public class TpSpringMvcApplication {
 		etudiantRepository.save(new Etudiant("Mohamed", df.parse("1988-11-10"), "mohamed@gmail.com", "mohamed.jpg"));
 		etudiantRepository.save(new Etudiant("Ibrahim", df.parse("1988-11-10"), "ibrahim@gmail.com", "ibrahim.jpg"));
 		
-		Page<Etudiant> etudiants = etudiantRepository.findAll(new PageRequest(0, 5));
+//		Page<Etudiant> etudiants = etudiantRepository.findAll(new PageRequest(0, 5));
+//		etudiants.forEach(e->System.out.println(e.getNom()));
+		
+		Page<Etudiant> etudiants = etudiantRepository.chercherEtudiant("%B%", new PageRequest(0, 5));
 		etudiants.forEach(e->System.out.println(e.getNom()));
 	}
 
