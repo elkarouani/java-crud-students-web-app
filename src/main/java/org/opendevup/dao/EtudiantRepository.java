@@ -1,5 +1,8 @@
 package org.opendevup.dao;
 
-public interface EtudiantRepository {
+import org.opendevup.entities.Etudiant;
+import org.springframework.data.jpa.repository.JpaRepository;
 
+public interface EtudiantRepository extends JpaRepository<Etudiant, Long>{
+	
 }

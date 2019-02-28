@@ -24,7 +24,7 @@ public class Etudiant implements Serializable{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Etudiant(Long id, String nom, Date dateNaissance, String email, String photo) {
+	public Etudiant(String nom, Date dateNaissance, String email, String photo) {
 		super();
 		this.nom = nom;
 		this.dateNaissance = dateNaissance;
