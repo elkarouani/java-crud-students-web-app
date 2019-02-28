@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
 <title>Liste des etudiants</title>
 </head>
 <body>
-	<h1>Test</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th><th>Nom</th><th>Date</th><th>Email</th><th>Photo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="e:${etudiants}">
+				<td th:text="${e.id}"></td>
+				<td th:text="${e.nom}"></td>
+				<td th:text="${e.dateNaissance}"></td>
+				<td th:text="${e.email}"></td>
+				<td th:text="${e.photo}"></td>
+			</tr>
+		</tbody>
+	</table>
 </body>
 </html>
