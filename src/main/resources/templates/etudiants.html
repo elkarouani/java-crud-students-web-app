@@ -15,7 +15,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="e:${etudiants}">
+				<tr th:each="e:${etudiants.content}">
 					<td th:text="${e.id}"></td>
 					<td th:text="${e.nom}"></td>
 					<td th:text="${e.dateNaissance}"></td>
